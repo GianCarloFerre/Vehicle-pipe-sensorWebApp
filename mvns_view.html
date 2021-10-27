@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MVNS Database</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap 4-->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!--
+	jQuery library
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	-->
+  <!--
+	Popper JS
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	 -->
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <!--
+	Bootstrap 4 Check Box Toggle
+  <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+  -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="content">
+    <header>
+      <img class="logo" alt="LTO Logo" src="LTO Logo.png">
+      <h5>Republic of the Philippines</h5>
+      <h1>LTO - Motorized Vehicle Noise Sensor Database</h1>
+      <h5>Department of Transportation</h5>
+    </header>
+    <br>
+    <br>
+    <div class="container" style="width:90%; margin:auto">
+      <legend>
+        <center>
+          <h3><b>Database<b></h3>
+        </center>
+      </legend>
+      <br>
+      <p>Welcome, Admin <a class="float_right_link" href="Login.php">Logout</a></p>
+      <!-- Container for View Control -->
+      <div class="form-row">
+        <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+          <!-- Date -->
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                Date:
+              </span>
+            </div>
+            <input id="dateFilter" name="dateFilter" class="form-control" placeholder="" type="date">
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+          <!-- From -->
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                From:
+              </span>
+            </div>
+          <input id="timeFromFilter" name="timeFromFilter" class="form-control" placeholder="" type="time">
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+          <!-- To -->
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                To:
+              </span>
+            </div>
+          <input id="timeToFilter" name="timeToFilter" class="form-control" placeholder="" type="time">
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+          <!-- Office -->
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                Officer:
+              </span>
+            </div>
+            <select id="officeFilter" name="officeFilter" class="custom-select" >
+              <option value="">Select Officer</option>
+              <option value="P. O. 1 Dionisio">P. O. 1 Dionisio</option>
+              <option value="P. O. 1 Ferre">P. O. 1 Ferre</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- Table Container -->
+      <div>
+        <table id='readingTable' class="view_table">
+          <!-- Table Header -->
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th class="short_cell">Time</th>
+							<th>Officer</th>
+							<th>Name</th>
+              <th>db Reading</th>
+              <th>Distance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+							<td>10/05/20</td>
+              <td>10:05 AM</td>
+							<td>P. O. 1 Dionisio</td>
+							<td>John Brix Pascual</td>
+              <td>200 db</td>
+              <td>50cm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <br>
+  <footer class="footer">
+    <p>All Rights Reserved<a class="float_right_link" href="#top">Back to Top</a></p>
+  </footer>
+</body>
+</html>
